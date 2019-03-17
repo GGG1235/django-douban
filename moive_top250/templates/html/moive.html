@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ moive.movie_name }}</title>
+    <link rel="SHORTCUT ICON" href="{% static "image/favicon.ico" %}"/>
+    <script type="text/javascript" language="javascript" src="{% static "js/Chart.min.js" %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static "js/jquery.js" %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static "js/index.js" %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static "js/moment-with-locales.js" %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static "js/vue.js" %}"></script>
+</head>
+<body>
+<h1>{{ moive.movie_name }}</h1>
+<p>排名:{{ moive.serial_number }}</p>
+<p>演员信息：{{ moive.introduce }}</p>
+<p>星级：{{ moive.star }}</p>
+<p>评价人数：{{ moive.evaluate }}</p>
+<p>评价：{{ moive.describe }}</p>
+<button type="button" onclick="returnhome()">返回</button>
+</body>
+</html>
